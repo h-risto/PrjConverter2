@@ -119,5 +119,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrjConverterComponent\PrjConverterComponent.vbproj">
+      <Project>{6523dec1-3936-43ce-ba7f-3132b15e38a3}</Project>
+      <Name>PrjConverterComponent</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

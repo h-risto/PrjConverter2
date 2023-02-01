@@ -1,16 +1,15 @@
 ﻿Public Class FormConverter
-
-    Private Const KM2MI = 1.609344
-
     Private Sub btnConvert_Click(sender As Object, e As EventArgs) Handles btnConvert.Click
 
+        Dim converter As PrjConverterComponent.IConverter
+        converter = New PrjConverterComponent.CConverter
+
         Try
-            txtMiles.Text = txtKilometers.Text / KM2MI
+            Dim result = converter.ConvertKilometersToMiles(txtKilometers.Text)
+            txtMiles.Text = result
         Catch ex As Exception
-            ' MsgBox("Vigane sisestus!", MsgBoxStyle.Critical)
             txtMiles.Text = "Sisesta vaid numbrid!"
         End Try
-
 
     End Sub
 
