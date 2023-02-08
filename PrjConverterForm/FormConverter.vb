@@ -17,7 +17,7 @@
         txtMiles.ReadOnly = True
         timerClock.Enabled = True
 
-        ' timer ticks once a second
+        ' timer ticks once a second x
         timerClock.Interval = 1000
     End Sub
 
